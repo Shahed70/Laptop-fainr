@@ -1,0 +1,16 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 91vh;
+    min-width: 350px;
+    background: linear-gradient(-120deg, #4285f4 , #34a853, #fbbc05, #ea4335)
+}
+.login-btn{    
+    background: linear-gradient(120deg, #4285f4 , #34a853, #fbbc05, #ea4335);
+    color: #fff;
+    padding: .8rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 30px;
+}

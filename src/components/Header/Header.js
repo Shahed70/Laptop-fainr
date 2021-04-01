@@ -26,13 +26,13 @@ const Header = () => {
                 Home <span className="sr-only">(current)</span>
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item active">
               <Link className="nav-link" to="/order">
-                Orders
+                Order 
               </Link>
             </li>
             <li className="nav-item dropdown">
-              <Link className="nav-link" to="/admin">
+              <Link className="nav-link" to="/deshboard">
                 Admin
               </Link>
             </li>
@@ -44,11 +44,6 @@ const Header = () => {
             <li className="nav-item">
               <Link className="nav-link" to="/login" >
                 Login
-              </Link>
-            </li>
-            <li>
-            <Link className="nav-link" to="/deshboard" >
-                Deshboard
               </Link>
             </li>
           </ul>

@@ -1,0 +1,7 @@
+.manage-product{
+    width: 100%;
+    background: #dedede;
+}
+.manage-product td{
+    width: 25%;
+}

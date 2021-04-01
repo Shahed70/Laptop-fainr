@@ -5,13 +5,15 @@ import './Home.css'
 const Home = () => {
     const [products, setProducts] = useState([])
     useEffect(()=>{
-        axios.get('http://localhost:5000/getProduct')
+        axios.get('http://strawberry-cobbler-77507.herokuapp.com/getProduct')
             .then(res => setProducts(res.data))
             .catch(err => console.log(err))
     }, [])
     return (
-        <div>
-            <Product products={products} />
+        <div className="pb-5">
+           {
+               products.length > 0 ?  <Product products={products} /> : <h1 className="text-center mt-5">Loading ....</h1>
+           }
         </div>
     );
 };

@@ -21,8 +21,10 @@ const Login = () => {
         firebase.auth().signInWithPopup(provider).
         then( result=>{
             const {displayName, email} = result.user;
-            const signedInUser = {name: displayName, email} 
+            const {lastSignInTime} = result.user.metadata;
+            const signedInUser = {name: displayName, email, lastSignInTime} 
             setLoggedInUser(signedInUser);
+            console.log(signedInUser);
             history.replace(from);
             // ...
           }).catch(function(error) {

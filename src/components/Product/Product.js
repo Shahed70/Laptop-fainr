@@ -18,9 +18,9 @@ const Product = ({products}) => {
                                 <div className="card-body">
                                     <img src={product.image} alt="Laptop"/>
                                      <h1>{product.name}</h1>
-                                     <div className="d-flex justify-content-around">
-                                        <p>$<span>{product.price}</span></p>
-                                         <button onClick={()=>handleProductDetaile(product._id)}>Buy Now</button>
+                                     <div className="d-flex justify-content-between align-items-center">
+                                        <p className="text-success pt-3 text-price">$<span>{product.price}</span></p>
+                                         <button className="btn btn-success" onClick={()=>handleProductDetaile(product._id)}>Buy Now</button>
                                      </div>
                                </div>
                             </div>

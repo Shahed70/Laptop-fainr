@@ -4,6 +4,7 @@ import { useHistory } from "react-router";
 import './Order.css'
 const Order = () => {
   const [orders, setOrders] = useState([]);
+  const total = orders.reduce( (total, prd) => total + parseInt(prd.checkOut.price) , 0 )
   const [err, setError] = useState();
   const history = useHistory()
   useEffect(() => {
@@ -21,6 +22,19 @@ const Order = () => {
        })
        .catch(err => console.log(err))
   }
+
+  let shipping = 0;
+  if(total > 400){
+      shipping = 0;
+  }
+  else {
+      shipping = 50;
+  }
+
+  const tax = (total*.10).toFixed(2);
+  const grandTotal = (total + shipping + Number(tax)).toFixed(2);
+
+
   return (
     <div className="container-fluid">
       <div className="container">
@@ -58,8 +72,22 @@ const Order = () => {
                     <p>Items</p>
                     <p>{orders.length}</p>
                 </div>
-                <div className="d-flex">
+                <div className="d-flex justify-content-between">
                   <p>Subtotal</p>
+                  <p>$ {total}</p>
+                </div>
+                <div className="d-flex justify-content-between">
+                  <p>Tax</p>
+                  <p>$ {tax}</p>
+                </div>
+                <div className="d-flex justify-content-between">
+                  <p>Shipping cost</p>
+                  <p>$ {shipping}</p>
+                </div>
+                <hr/>
+                <div className="d-flex justify-content-between">
+                  <p>Total</p>
+                  <p>$ {grandTotal}</p>
                 </div>
           </div>
         </div>

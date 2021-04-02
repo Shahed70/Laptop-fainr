@@ -14,10 +14,9 @@ const App = () => {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Header />
-        <h1>{loggedInUser.email}</h1>
         <Switch>
           <Route exact path="/">
-            <Home />
+            <Home /> 
           </Route>
           <Route path="/home">
             <Home />

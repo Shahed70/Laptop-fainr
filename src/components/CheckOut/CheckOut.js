@@ -20,9 +20,15 @@ const CheckOut = ({orderInfo}) => {
 const handleOrder = ()=>{
     const newData = {...loggedInUser, checkOut}
     setLoggedInUser(newData)
-    axios.post('https://strawberry-cobbler-77507.herokuapp.com/orderInfo', (orderInfo))
-        .then(res => console.log('data sent success fully', res))
-        .catch(err => console.log(err))
+    // axios.post('http://localhost5000/orderInfo', (orderInfo))
+    //     .then(res => console.log('data sent success fully', res))
+    //     .catch(err => console.log(err))
+
+        fetch('https://strawberry-cobbler-77507.herokuapp.com/orderinfo', {
+          method:'POST',
+          headers: {'Content-Type':'application/json'},
+          body:JSON.stringify(orderInfo)
+        })
         
 }
 

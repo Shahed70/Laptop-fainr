@@ -6,9 +6,9 @@ const Header = () => {
   const [loggedInUser] = useContext(UserContext)
   return (
     <div className="container-fluid px-0">
-      <nav className="navbar navbar-expand-md navbar-light bg-light">
+      <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top mb-5">
         <Link className="navbar-brand" to="/">
-          Navbar
+          LAPTOP FAIR
         </Link>
         <button
           className="navbar-toggler"
@@ -25,26 +25,26 @@ const Header = () => {
           <ul className="navbar-nav ml-auto">
             <li className="nav-item active">
               <Link className="nav-link" to="/">
-                Home <span className="sr-only">(current)</span>
+                HOME 
               </Link>
             </li>
-            <li className="nav-item active">
+            <li className="nav-item">
               <Link className="nav-link" to="/order">
-                Order 
+                ORDER 
               </Link>
             </li>
             <li className="nav-item dropdown">
               <Link className="nav-link" to="/deshboard">
-                Admin
+                ADMIN
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="#" >
-                Deals
+                DEALS
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/login">Login</Link>
+              <Link className="nav-link" to="/login">LOGIN</Link>
             </li>
           </ul>
         </div>

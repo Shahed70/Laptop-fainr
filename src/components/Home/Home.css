@@ -1,0 +1,18 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 258px;
+    margin-bottom: 50px;
+    background: rgb(24, 24, 24);
+    color: #fff;
+    padding: 12px 0;
+}
+footer{
+    padding-top: inherit;
+}
+
+@media (max-width:500px) {
+    .footer{
+        margin-top: 320vh;
+    }
+}

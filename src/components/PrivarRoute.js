@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Redirect, Route } from "react-router";
+import { UserContext } from "./App/App";
 
 const PrivarRoute = ({children, ...rest}) => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext)
   return (
     <div>
       <Route
         {...rest}
         render={({ location }) =>
-          auth.user ? (
+        loggedInUser.email ? (
             children
           ) : (
             <Redirect

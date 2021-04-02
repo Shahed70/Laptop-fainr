@@ -6,6 +6,7 @@ import Home from "../Home/Home";
 import Login from "../Login/Login";
 import CheckOut from "../CheckOut/CheckOut";
 import Order from "../Order/Order";
+import PrivarRoute from "../PrivarRoute";
 export const UserContext = createContext();
 const App = () => {
   const [loggedInUser, setLoggedInUser] = useState({});
@@ -21,9 +22,9 @@ const App = () => {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/deshboard">
-            <Deshboard />
-          </Route>
+          <PrivarRoute path="/deshboard">
+              <Deshboard />
+          </PrivarRoute>
           <Route path="/login">
             <Login />
           </Route>

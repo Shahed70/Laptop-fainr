@@ -20,7 +20,6 @@ const Order = () => {
   
        })
        .catch(err => console.log(err))
-      console.log(id);
   }
   return (
     <div className="container-fluid">

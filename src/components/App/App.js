@@ -24,14 +24,14 @@ const App = () => {
           <PrivarRoute path="/deshboard">
               <Deshboard />
           </PrivarRoute>
+          <PrivarRoute path="/order">
+              <Order />
+          </PrivarRoute>
           <Route path="/login">
             <Login />
           </Route>
           <Route path='/checkout/:id'>
              <CheckOut orderInfo={loggedInUser} />
-          </Route>
-          <Route path="/order">
-             <Order />
           </Route>
         </Switch>
       </Router>

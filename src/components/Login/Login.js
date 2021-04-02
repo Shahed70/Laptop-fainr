@@ -22,9 +22,8 @@ const Login = () => {
         then( result=>{
             const {displayName, email} = result.user;
             const {lastSignInTime} = result.user.metadata;
-            const signedInUser = {name: displayName, email, lastSignInTime} 
+            const signedInUser = {name: displayName, email, lastSignInTime}
             setLoggedInUser(signedInUser);
-            console.log(signedInUser);
             history.replace(from);
             // ...
           }).catch(function(error) {

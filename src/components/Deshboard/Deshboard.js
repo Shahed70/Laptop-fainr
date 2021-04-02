@@ -32,7 +32,9 @@ const Deshboard = () => {
     axios
       .post("https://strawberry-cobbler-77507.herokuapp.com/addProduct", products)
       .then((res) => {
-        console.log(res);
+        if(res.status === 200){
+          alert('Product upload successful! please refresh the page')
+        }
       })
       .catch((err) => console.log(err));
   };
@@ -42,25 +44,25 @@ const Deshboard = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-2 col-sm-12 admin-nav pt-5">
-            <ul className="nav flex-column fixed">
+            <ul className="nav flex-column fixed pt-1">
               <li className="nav-item">
-                <a className="nav-link text-light btn btn-normal" href="#mangeproduct">
+                <a className=" text-light btn btn-normal" href="#mangeproduct">
                   Manage Product
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-light btn btn-normal" href="#addproduct">
+                <a className=" text-light btn btn-normal" href="#addproduct">
                   Add Product
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link text-light btn btn-normal" to="#">
+                <a className="text-light btn btn-normal" to="#">
                   Edit Product
                 </a>
               </li>
             </ul>
           </div>
-          <div className="col-md-10 col-sm-12 px-0 admin-board">
+          <div className="col-md-10 col-sm-12 px-0 admin-board pt-5">
             <div id="mangeproduct">
               <ProductManage />
             </div>

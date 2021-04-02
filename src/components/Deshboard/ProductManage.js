@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./ProductManage.css";
 const ProductManage = () => {
   const [products, setProducts] = useState([]);
+  console.log(products);
   useEffect(() => {
     axios
       .get("https://strawberry-cobbler-77507.herokuapp.com/getProduct")
@@ -16,11 +17,14 @@ const ProductManage = () => {
         `https://strawberry-cobbler-77507.herokuapp.com/deleteProduct/${id}`
       )
       .then((res) => {
+        if(res.status === 200){
+          alert('Product deleted successfully! please refresh the page')
+        }
         console.log(res);
-        setProducts();
+  
       });
 
-    console.log(id);
+
   };
   return (
     <div className="manage-product">
@@ -31,7 +35,7 @@ const ProductManage = () => {
       ) : (
         <table className="table">
           <thead>
-            <tr>
+            <tr className="bg-success text-light">
               <th>Porduct Name</th>
               <th>Price</th>
               <th>Product Description</th>

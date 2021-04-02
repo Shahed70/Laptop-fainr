@@ -17,7 +17,9 @@ const Order = () => {
   const removeOrderHandler = (id)=>{
        axios.post(`https://strawberry-cobbler-77507.herokuapp.com/deleteOrderInfo/${id}`)
        .then(res => {
-         console.log(res);
+         if(res.status ===200){
+           alert('Check out successfull')
+         }
   
        })
        .catch(err => console.log(err))
@@ -36,7 +38,7 @@ const Order = () => {
 
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid pt-5 mt-4">
       <div className="container">
         <div className="row">
           <div className="col-md-10 col-sm-12">
@@ -44,8 +46,8 @@ const Order = () => {
                 orders.length === 0 ? 
                 <h1 className="text-danger mt-t pt-5">You haven't made any order yet</h1>
                 :
-                <div className="flex-box border-right">
-                <div className="orders">
+                <div className="flex-box border-right ">
+                <div className="orders bg-success text-light  p-3">
                   <h4>Product Image</h4>
                   <h4>Product Name</h4>
                   <h4>Product Price</h4>
@@ -66,7 +68,7 @@ const Order = () => {
               }
           </div>
           <div className="col-md-2 col-sm-12">
-                <h5 className="mb-4 pb-1">Order Summery</h5>
+                <h5 className="mb-4 pb-1 bg-success p-2 text-light text-center">Order Summery</h5>
                 <hr/>
                 <div className="d-flex justify-content-between">
                     <p>Items</p>

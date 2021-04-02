@@ -6,7 +6,7 @@ const Header = () => {
   const [loggedInUser] = useContext(UserContext)
   return (
     <div className="container-fluid px-0">
-      <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top mb-5">
+      <nav className="navbar navbar-expand-md navbar-dark bg-dark fixed-top mb-5 pb">
         <Link className="navbar-brand" to="/">
           LAPTOP FAIR
         </Link>
@@ -44,7 +44,9 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/login">LOGIN</Link>
+              {
+                loggedInUser.name ? <Link className="nav-link" to="#">{loggedInUser.name}</Link> : <Link className="nav-link" to="/login">LOGIN</Link>
+              }
             </li>
           </ul>
         </div>

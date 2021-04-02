@@ -5,7 +5,7 @@ import './Home.css'
 const Home = () => {
     const [products, setProducts] = useState([])
     useEffect(()=>{
-        axios.get('http://strawberry-cobbler-77507.herokuapp.com/getProduct')
+        axios.get('https://strawberry-cobbler-77507.herokuapp.com/getProduct')
             .then(res => setProducts(res.data))
             .catch(err => console.log(err))
     }, [])

@@ -8,13 +8,13 @@ const Order = () => {
   const history = useHistory()
   useEffect(() => {
     axios
-      .get("http://strawberry-cobbler-77507.herokuapp.com/getOrderInfo")
+      .get("https://strawberry-cobbler-77507.herokuapp.com/getOrderInfo")
       .then((res) => setOrders(res.data))
       .catch((err) => setError(err));
   }, []);
 
   const removeOrderHandler = (id)=>{
-       axios.post(`http://strawberry-cobbler-77507.herokuapp.com/deleteOrderInfo/${id}`)
+       axios.post(`https://strawberry-cobbler-77507.herokuapp.com/deleteOrderInfo/${id}`)
        .then(res => {
          console.log(res);
   

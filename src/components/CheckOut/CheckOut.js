@@ -10,7 +10,7 @@ const CheckOut = ({orderInfo}) => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   useEffect(() => {
     axios
-      .get(`http://strawberry-cobbler-77507.herokuapp.com/getSingleProduct/${id}`)
+      .get(`https://strawberry-cobbler-77507.herokuapp.com/getSingleProduct/${id}`)
       .then((res) => {
         setCheckOut(res.data)
       })
@@ -20,7 +20,7 @@ const CheckOut = ({orderInfo}) => {
 const handleOrder = ()=>{
     const newData = {...loggedInUser, checkOut}
     setLoggedInUser(newData)
-    axios.post('http://strawberry-cobbler-77507.herokuapp.com/orderInfo', orderInfo)
+    axios.post('https://strawberry-cobbler-77507.herokuapp.com/orderInfo', orderInfo)
         .then(res => console.log('data sent success fully', res))
         .catch(err => console.log(err))
         

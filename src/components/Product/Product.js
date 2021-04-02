@@ -2,7 +2,6 @@ import React from 'react';
 import { useHistory } from 'react-router';
 import './Product.css'
 const Product = ({products}) => {
-    //console.log(products);
     const history = useHistory()
     const handleProductDetaile = (id)=>{
             history.push(`/checkout/${id}`)

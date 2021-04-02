@@ -30,7 +30,7 @@ const Deshboard = () => {
   const addProductHandler = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/addProduct", products)
+      .post("https://strawberry-cobbler-77507.herokuapp.com/addProduct", products)
       .then((res) => {
         console.log(res);
       })

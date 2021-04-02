@@ -4,13 +4,13 @@ import './ProductManage.css'
 const ProductManage = () => {
     const [products, setProducts] = useState([])
     useEffect(()=>{
-        axios.get('http://strawberry-cobbler-77507.herokuapp.com/getProduct')
+        axios.get('https://strawberry-cobbler-77507.herokuapp.com/getProduct')
             .then(res => setProducts(res.data))
             .then(err => console.log(err))
     }, [])
 
     const deleteProductHandler = (id)=>{
-        axios.post(`http://strawberry-cobbler-77507.herokuapp.com/deleteProduct/${id}`)
+        axios.post(`https://strawberry-cobbler-77507.herokuapp.com/deleteProduct/${id}`)
           .then(res => {
               console.log(res);
               setProducts()

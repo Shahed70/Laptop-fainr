@@ -42,7 +42,7 @@ const Order = () => {
           <div className="col-md-10 col-sm-12">
               {
                 orders.length === 0 ? 
-                <h1>You haven't made any order yet</h1>
+                <h1 className="text-danger mt-t pt-5">You haven't made any order yet</h1>
                 :
                 <div className="flex-box border-right">
                 <div className="orders">

@@ -12,7 +12,12 @@ const Home = () => {
     return (
         <div className="pb-5">
            {
-               products.length > 0 ?  <Product products={products} /> : <h1 className="text-center mt-5">Loading ....</h1>
+               products.length > 0 ?  <Product products={products} /> : 
+               <div className=" d-flex mt-5 pt-5 justify-content-center">
+                  <div class="spinner-border text-success" role="status">
+                    </div>
+               </div>
+
            }
         </div>
     );

@@ -30,26 +30,33 @@ const handleOrder = ()=>{
       <div className="container-fluid">
         <div className="container">
           <div className="row">
-            <div className="col-md-12 col-sm-12">
-                <h1 className="py-3">Checkout</h1>
-              <div className="d-flex justify-content-between">
-                <h5>Description</h5>
-                <h5>Quantity</h5>
-                <h5>Price</h5>
-              </div>
-              <hr/>
-              <div className="d-flex justify-content-between">
-                <h5>{checkOut.name}</h5>
-                <h5>1</h5>
-                <h5>$ {checkOut.price}</h5>
-              </div>
-              <hr/>
-              <div className="d-flex justify-content-between">
-                  <h5>Total</h5>
+            <h1 className="py-3">Checkout</h1>
+              {
+                checkOut != null ? <div className="col-md-12 col-sm-12">
+                <div className="d-flex justify-content-between">
+                  <h5>Description</h5>
+                  <h5>Quantity</h5>
+                  <h5>Price</h5>
+                </div>
+                <hr/>
+                <div className="d-flex justify-content-between">
+                  <h5>{checkOut.name}</h5>
+                  <h5>1</h5>
                   <h5>$ {checkOut.price}</h5>
+                </div>
+                <hr/>
+                <div className="d-flex justify-content-between">
+                    <h5>Total</h5>
+                    <h5>$ {checkOut.price}</h5>
+                </div>
+                <button onClick={handleOrder} className="btn btn-success float-right mt-5 p-3">Checkout</button>
               </div>
-              <button onClick={handleOrder} className="btn btn-success float-right mt-5 p-3">Checkout</button>
-            </div>
+              :
+              <div className=" d-flex mt-5 pt-5 justify-content-center">
+                  <div class="spinner-border text-success" role="status">
+                    </div>
+               </div>
+              }
           </div>
         </div>
       </div>

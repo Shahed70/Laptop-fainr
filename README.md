@@ -8,7 +8,7 @@ Admin Funtionalities:
 3.Admin can edit product
 4.Admin can delete product and much more
 
-User functionalites:
+## User functionalites:
 1. User can choose product
 2. User can buy multiple product
 3. User also sign in first to see his/her complete order information

@@ -1,6 +1,6 @@
-Project Name: #Laptop fair
+# Project Name: Laptop fair
 
-###Project Description: A fully responsive Ecommerce web application With some advanced funtionalities
+### Project Description: A fully responsive Ecommerce web application With some advanced funtionalities
 
 Admin Funtionalities:
 1.Admin must login first with to make any change of the application

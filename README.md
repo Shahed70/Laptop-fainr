@@ -13,4 +13,4 @@
 2. User can buy multiple product 
 3. User also sign in first to see his/her complete order information
 
-visit live site[https://computer-shop-5184e.web.app/]
+visit live site [https//:laptopfair.com](https://computer-shop-5184e.web.app/)

@@ -2,7 +2,7 @@
 
 ### Project Description: A fully responsive Ecommerce web application With some advanced funtionalities
 
-Admin Funtionalities: \
+## Admin Funtionalities: 
 1.Admin must login first with to make any change of the application. \
 2.Admin can added more product. \
 3.Admin can edit product. \
